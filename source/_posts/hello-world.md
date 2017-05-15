@@ -4,7 +4,6 @@ date: 2016-10-26
 ---
 Finally, after a couple of years off, I decided to return to blogging. But this time I'll take things easy.
 <!-- more -->
-Finally, after a couple of years off, I decided to return to blogging. But this time I'll take things easy.
 
 The first blog I started writing, was back in 2010. I created a personal website in Wordpress, where I used to post things about my life as a Computer Science student and my experience learning iOS development. I used to write during the weekends, putting together tutorials about how to make apps and basic games using Cocos2D. It was fun for me, I felt like I was talking to the world, sharing my knowledge with others. And it didn't take long until other website called Mobile Orchard, noticed my tutorials and made me an offer to write for them.
 

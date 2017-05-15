@@ -5,7 +5,6 @@ tags: architecture, use case, Redux, React, Flux
 ---
 React-Redux is a great architecture for the web, but how great is it for iOS apps?
 <!-- more -->
-React-Redux is a great architecture for the web, but how great is it for iOS apps?
 
 Not long ago, when I was about to start working on an iPad app for a new client, I stumbled upon this [video](https://www.youtube.com/watch?v=Oau4JjJP3nA), and this [other one](https://news.realm.io/news/benji-encz-unidirectional-data-flow-swift/). They talked about the benefits of Redux, and how great it would be to borrow some ideas for developing iOS apps. After doing some research, and finding some frameworks that pretend to implement React-Redux with Swift. I realised, that the framework is way too opinionated for my taste, and decided to write my own thing.
 
