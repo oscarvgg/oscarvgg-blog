@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://oscarvgg.com/"/>
-  <updated>2016-10-26T20:20:52.000Z</updated>
+  <updated>2017-05-15T20:58:09.000Z</updated>
   <id>http://oscarvgg.com/</id>
   
   <author>
@@ -14,6 +14,41 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Flux/Redux inspired architecture with RxSwift</title>
+    <link href="http://oscarvgg.com/2017/04/17/redux-inspired-architecture-with-rxswift/"/>
+    <id>http://oscarvgg.com/2017/04/17/redux-inspired-architecture-with-rxswift/</id>
+    <published>2017-04-16T22:00:00.000Z</published>
+    <updated>2017-05-15T20:58:09.000Z</updated>
+    
+    <content type="html">&lt;p&gt;React-Redux is a great architecture for the web, but how great is it for iOS apps?&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;br&gt;React-Redux is a great architecture for the web, but how great is it for iOS apps?&lt;/p&gt;
+&lt;p&gt;Not long ago, when I was about to start working on an iPad app for a new client, I stumbled upon this &lt;a href=&quot;https://www.youtube.com/watch?v=Oau4JjJP3nA&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;video&lt;/a&gt;, and this &lt;a href=&quot;https://news.realm.io/news/benji-encz-unidirectional-data-flow-swift/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;other one&lt;/a&gt;. They talked about the benefits of Redux, and how great it would be to borrow some ideas for developing iOS apps. After doing some research, and finding some frameworks that pretend to implement React-Redux with Swift. I realised, that the framework is way too opinionated for my taste, and decided to write my own thing.&lt;/p&gt;
+&lt;h2 id=&quot;Overview&quot;&gt;&lt;a href=&quot;#Overview&quot; class=&quot;headerlink&quot; title=&quot;Overview&quot;&gt;&lt;/a&gt;Overview&lt;/h2&gt;&lt;p&gt;Flux and Redux, enforce the concept of unidirectional data flow. This is a great idea, because it keeps the architecture cleaner and easier to maintain.&lt;/p&gt;
+&lt;p&gt;[architecture image]&lt;/p&gt;
+&lt;p&gt;It consisted of three fundamental pieces: The view, represented by view controllers, the use case, which would work similarly to the reducers in Redux, the data, a layer composed by objects that provide information relevant to the app, and finally, the state store, in charge of applying the new states. To tie it all together, I used RxSwift.&lt;/p&gt;
+&lt;h3 id=&quot;The_view&quot;&gt;&lt;a href=&quot;#The_view&quot; class=&quot;headerlink&quot; title=&quot;The view&quot;&gt;&lt;/a&gt;The view&lt;/h3&gt;&lt;p&gt;The views are just UIViews and/or UIViewControllers. Here, you can go as simple or complex as you want. Use a single, multiple, embed them, you name it. The important thing is that they display the information according to the state and call the corresponding use case to each user action.&lt;/p&gt;
+&lt;h3 id=&quot;The_Use_Case&quot;&gt;&lt;a href=&quot;#The_Use_Case&quot; class=&quot;headerlink&quot; title=&quot;The Use Case&quot;&gt;&lt;/a&gt;The Use Case&lt;/h3&gt;&lt;p&gt;The use case is where the logic of the app relies. They also communicate to the databases or any other source of information relevant to the system, and push the state changes into the State Store.&lt;/p&gt;
+&lt;h3 id=&quot;The_Data_Source&quot;&gt;&lt;a href=&quot;#The_Data_Source&quot; class=&quot;headerlink&quot; title=&quot;The Data Source&quot;&gt;&lt;/a&gt;The Data Source&lt;/h3&gt;&lt;p&gt;The data source(s) are all the structures responsible for retrieving the information that feeds the app, for example, a class that gets data from a database would be the most popular example of a data source. However, it could be any input data. For instance, I recently worked on a project where a significant amount of the data, came from the readings of a drone. Therefore, don’t think about the sources as just data bases or web services, it could be any form of information feeding the app.&lt;/p&gt;
+&lt;h3 id=&quot;The_State_Store&quot;&gt;&lt;a href=&quot;#The_State_Store&quot; class=&quot;headerlink&quot; title=&quot;The State Store&quot;&gt;&lt;/a&gt;The State Store&lt;/h3&gt;&lt;p&gt;This is the data structure that holds the State of the system, and sends it to it’s subscribers when changes are made.&lt;/p&gt;
+&lt;p&gt;The state could be just be a &lt;code&gt;struct&lt;/code&gt; that contain the values relevant to the system.&lt;/p&gt;
+&lt;p&gt;The use cases submit the updated value of the state to the store and then sends it to the subscribed objects (the views, usually).&lt;/p&gt;
+&lt;h2 id=&quot;Conclusion&quot;&gt;&lt;a href=&quot;#Conclusion&quot; class=&quot;headerlink&quot; title=&quot;Conclusion&quot;&gt;&lt;/a&gt;Conclusion&lt;/h2&gt;&lt;p&gt;This architecture makes it easier to keep concerns separated and focused, which is great for maintenance and testing. However, I wouldn’t recommend it for smaller projects as it adds unnecessary complexity. For bigger projects, it may work fine to some extend, but I really haven’t tried it yet. In my opinion, it works best for medium size projects, which is most of the size of iOS apps.&lt;/p&gt;
+&lt;p&gt;If you want to see an example of all this ideas working, check out the playground file in the following link.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/oscarvgg/redux-inspired-architecture-ios&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/oscarvgg/redux-inspired-architecture-ios&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;I’m always eager to read your comments about this sort of things, so please let me know in the comments section below what do you like or what would you change.&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;React-Redux is a great architecture for the web, but how great is it for iOS apps?&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="architecture, use case, Redux, React, Flux" scheme="http://oscarvgg.com/tags/architecture-use-case-Redux-React-Flux/"/>
+    
+  </entry>
   
   <entry>
     <title>Hello World!</title>
