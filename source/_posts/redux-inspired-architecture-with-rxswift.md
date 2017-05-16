@@ -12,7 +12,7 @@ Not long ago, when I was about to start working on an iPad app for a new client,
 
 Flux and Redux, enforce the concept of unidirectional data flow. This is a great idea, because it keeps the architecture cleaner and easier to maintain.
 
-[architecture image]
+![](/images/redux-inspired-architecture-for-ios.png)
 
 It consisted of three fundamental pieces: The view, represented by view controllers, the use case, which would work similarly to the reducers in Redux, the data, a layer composed by objects that provide information relevant to the app, and finally, the state store, in charge of applying the new states. To tie it all together, I used RxSwift.
 
