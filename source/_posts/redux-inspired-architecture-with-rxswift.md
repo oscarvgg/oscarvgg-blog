@@ -42,6 +42,6 @@ This architecture makes it easier to keep concerns separated and focused, which 
 
 If you want to see an example of all this ideas working, check out the playground file in the following link.
 
-[https://github.com/oscarvgg/redux-inspired-architecture-ios](https://github.com/oscarvgg/redux-inspired-architecture-ios)
+[![attached swift file](/images/swift-file-icon.png) Download here](https://github.com/oscarvgg/redux-inspired-architecture-ios)
 
 I'm always eager to read your comments about this sort of things, so please let me know in the comments section below what do you like or what would you change.
