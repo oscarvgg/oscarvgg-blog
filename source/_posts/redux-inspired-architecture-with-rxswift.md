@@ -2,6 +2,8 @@
 title: Flux/Redux inspired architecture with RxSwift
 date: 2017-04-17
 tags: architecture, use case, Redux, React, Flux
+category:
+  - post
 ---
 React-Redux is a great architecture for the web, but how great is it for iOS apps?
 <!-- more -->

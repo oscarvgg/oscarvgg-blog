@@ -1,6 +1,8 @@
 ---
 title: Hello World!
 date: 2016-10-26
+category:
+  - post
 ---
 Finally, after a couple of years off, I decided to return to blogging. But this time I'll take things easy.
 <!-- more -->
