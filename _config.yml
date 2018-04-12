@@ -69,6 +69,6 @@ theme: apollo
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/oscarvgg/oscarvgg-blog.git
+  repo: https://github.com/oscarvgg/oscarvgg.com.git
   branch: gh-pages
-  message: add portfolio
+  message: update site
