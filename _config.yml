@@ -71,4 +71,4 @@ deploy:
   type: git
   repo: https://github.com/oscarvgg/oscarvgg.com.git
   branch: gh-pages
-  message: update site
+  message: update css
